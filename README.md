@@ -53,7 +53,7 @@ Within the Azure portal, I created a new rule set-up to Deny ICMP with a with a 
 <img src="https://i.imgur.com/i3BC2LW.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-With the New Firewall rule in place I returned to the VM1's Windowed Connection through RDP. As the suspected I saw the Ping requests eventually time out. When I changed the rule back to Allow ICMP through the Firewall (NSG) the Ping Request reinitialized right back from where they started. 
+With the New Firewall rule in place I returned to the VM1's Windowed Connection through RDP. As the suspected I saw the Ping requests eventually time out. When I changed the rule back to Allow ICMP through the Firewall (NSG) the Ping Request reinitialized right back from where it started. 
 </p>
 <br />
 
@@ -77,7 +77,7 @@ After examining SSH traffic, I exited the Ubuntu server in order to filter for D
 <img src="https://i.imgur.com/gtiupfH.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-To observe DNS traffic, I used the filter udp.port == 53 and the command nslookup. I wanted to see the results that are from looking up google.com and disney.com, two very popular sites. 
+Continuing from the SSH Observation, I decided to analyze DNS traffic by employing the filter "udp.port == 53" along with the nslookup command. My intention was to observe the results of looking up two highly popular sites, google.com and disney.com. 
 </p>
 <br />
 
@@ -85,10 +85,12 @@ To observe DNS traffic, I used the filter udp.port == 53 and the command nslooku
 <img src="https://i.imgur.com/N7voXYU.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-To finish my lab, I decided to observe RDP traffic. The filter for Wireshark is tcp.port == 3389. There is non-stop traffic because RDP is constantly showing me a live stream from one computer to another (in my case, my computer accessing the VM that is hosted on Azure) and thus traffic is always transmitted. 
+To Conclude the lab, I chose to monitor RDP traffic with the filter "tcp.port == 3389." The traffic is continuous because RDP constantly streams live data from one computer to another. In my case, it involves my computer accessing a VM hosted on Azure, resulting in a constant flow of transmitted data.
 </p>
 <br />
 
 <h2>Lessons Learned </h2>
 
-The purpose of this lab is for me to see how different protocols and ports are utilized in a network between devices. While this lab does not exactly allow me to troubleshoot, it still serves a purpose to gather information. While troubleshooting, I need to utilize different tools like Wireshark and the command line to see how traffic flows in a network through ports and protocols. Familiarity and an inquisitive mind are key to success!
+In this lab, the primary objective is to gain insights into the dynamics of network communication among devices by examining the usage of different protocols and ports. While the lab may not involve direct troubleshooting, it plays a crucial role in information gathering. When actively troubleshooting network issues, I leverage essential tools such as Wireshark and the command line. These tools allow me to dissect and analyze the flow of traffic through various ports and protocols, providing a comprehensive understanding of the network's behavior.
+
+Successful troubleshooting demands not only technical proficiency with these tools but also a curious and inquisitive mindset. Being familiar with the intricacies of network protocols and having a proactive approach to investigate and understand the traffic patterns are key elements for achieving success in resolving network issues. In essence, this lab serves as a valuable foundation, cultivating the skills and knowledge necessary for effective troubleshooting in real-world network scenarios.
