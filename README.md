@@ -42,9 +42,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
   <br> 2. Create a Windows 10 Virtual Machine (VM) <br>
 <br> - While creating the VM, select the previously created Resource Group <br>
 <br> - While creating the VM, allow it to create a new Virtual Network (Vnet) and Subnet <br>
-  <img src="https://imgbox.com/jxIp19aZ" alt="Create VM"/>
-  <img src="https://imgbox.com/hoky3fCP" alt="VM1 Creation 1"/>
-  <img src="https://imgbox.com/9rYI3wYm" alt="VM1 Creation 2"/>
+  <a href="https://imgbox.com/9rYI3wYm" target="_blank"><img src="https://thumbs2.imgbox.com/c6/0f/9rYI3wYm_t.png" alt="image host"/></a> <a href="https://imgbox.com/hoky3fCP" target="_blank"><img src="https://thumbs2.imgbox.com/3e/fb/hoky3fCP_t.png" alt="image host"/></a> <a href="https://imgbox.com/75xY1XxG" target="_blank"><img src="https://thumbs2.imgbox.com/b1/35/75xY1XxG_t.png" alt="image host"/></a> <a href="https://imgbox.com/4q1LFFbZ" target="_blank"><img src="https://thumbs2.imgbox.com/21/1a/4q1LFFbZ_t.png" alt="image host"/></a> <a href="https://imgbox.com/jxIp19aZ" target="_blank"><img src="https://thumbs2.imgbox.com/d7/14/jxIp19aZ_t.png" alt="image host"/></a>
 <br> 3. Create a Linux (Ubuntu) VM <br>
 <br> a. While create the VM, select the previously created Resource Group and Vnet <br>
 <br> 4. Observe Your Virtual Network within Network Watcher <Br>
