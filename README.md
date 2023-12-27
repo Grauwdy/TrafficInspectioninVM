@@ -35,7 +35,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>Actions and Observations</h2>
 
 <p>
-<img src="https://imgur.com/DBTZxkr" height="80%" width="80%" alt=""/>
+![Visit Page 1edit ](https://github.com/Grauwdy/TrafficInspectioninVM/assets/102836138/20b5ff08-4673-481d-9d50-c107b7fb6387)
+
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
