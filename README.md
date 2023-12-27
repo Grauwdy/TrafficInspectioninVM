@@ -38,14 +38,14 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 <p>
   <img src="https://images2.imgbox.com/0b/50/n5wG3dfV_o.png?download=true" alt="RG Grouppage"/>
-1. Create a Resource Group
+<br>1. Create a Resource Group<br>
   <img src="https://imgbox.com/jxIp19aZ" alt="Create VM"/>
   <img src="https://imgbox.com/hoky3fCP" alt="VM1 Creation 1"/>
   <img src="https://imgbox.com/9rYI3wYm" alt="VM1 Creation 2"/>
-2. Create a Windows 10 Virtual Machine (VM)
+  <br> 2. Create a Windows 10 Virtual Machine (VM)<br>
     a. While creating the VM, select the previously created Resource Group
     b. While creating the VM, allow it to create a new Virtual Network (Vnet) and Subnet
-3. Create a Linux (Ubuntu) VM
+<br>3. Create a Linux (Ubuntu) VM<br>
 a. While create the VM, select the previously created Resource Group and Vnet
 4. Observe Your Virtual Network within Network Watcher
 </p>
