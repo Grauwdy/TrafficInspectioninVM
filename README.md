@@ -29,7 +29,7 @@ I Configured two VMs in Azure within the same virtual network for communication.
 <img src="https://i.imgur.com/DutP0XT.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Using Remote Desktop Connection, I connect to the Windows VM using its public IP address. From there, I installed Wireshark in order to begin inspecting traffic. 
+Using RDP, I connected to the Windows VM using its Public IP. Next, I installed Wireshark a well know program that is used to inspect network traffic across the network. 
 </p>
 <br />
 
@@ -37,7 +37,7 @@ Using Remote Desktop Connection, I connect to the Windows VM using its public IP
 <img src="https://i.imgur.com/2JQawfN.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Within Wireshark, I filtered for ICMP (Internet Control Message Protocol) traffic and opened PowerShell to execute a command called ping. Ping utilizes ICMP, which is used by devices in a network to communicate problems within data transmition. I used ping to see if I can communicate with the Ubuntu VM using its private IP address and with google.com. Afterwards, I used a perpetual ping to the Ubuntu VM in order to see how network security groups work. I executed the perpetual ping with the command: ping -t (ip address).
+Once Wireshark was downloaded and installed, I went ahead and filtered for ICMP traffic. Opened up Powershell and executed a Ping from VM1 (Windows) to VM2 (Ubuntu) using its Private IP within the Virtual network. Since Ping uses the ICPM protocol it is a very commononly use command when someone is trying to diagnose an issue with data transmission. Once I confirmed the Ping Request was successful, I initiated a constant ping with Ping -t (IP Address) to the Ubuntu VM in order to experiment with Network Security Groups within Azure.
 </p>
 <br />
 
@@ -45,7 +45,7 @@ Within Wireshark, I filtered for ICMP (Internet Control Message Protocol) traffi
 <img src="https://i.imgur.com/HTga2Iq.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Within the Azure portal, I opened the networking settings for the Ubuntu VM and added an inbound security rule to block ICMP traffic. I make sure to have the priority higher than SSH (300) to ensure the rule applies first. 
+Within the Azure portal, I created a new rule set-up to Deny ICMP with a with a pritority above 300 to make sure this rule would get applied before anything else. 
 </p>
 <br />
 
@@ -53,7 +53,7 @@ Within the Azure portal, I opened the networking settings for the Ubuntu VM and 
 <img src="https://i.imgur.com/i3BC2LW.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Upon returning to the Windows VM, I notice that the ICMP traffic is blocked now that the inbound security rule is in place. After changing the rule to allow traffic again, the perpetual ping resolves without timing out. 
+With the New Firewall rule in place I returned to the VM1's Windowed Connection through RDP. As the suspected I saw the Ping requests eventually time out. When I changed the rule back to Allow ICMP through the Firewall (NSG) the Ping Request reinitialized right back from where they started. 
 </p>
 <br />
 
@@ -61,7 +61,7 @@ Upon returning to the Windows VM, I notice that the ICMP traffic is blocked now 
 <img src="https://i.imgur.com/fDtuLo9.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Next, I chose to examine SSH traffic. I logged in to the Ubuntu server via PowerShell with the ssh command. With Wireshark, I filtered the traffic with tcp.port == 22. While logged into the Ubuntu server, my session is logged in Wireshark with each command I use.
+Next, I wanted to check out the SSH traffic, so I logged into the Ubuntu server using PowerShell and the ssh command. Then, I used Wireshark to sift through the traffic on port 22.
 </p>
 <br />
 
