@@ -38,7 +38,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 <p>
   <img src="https://images2.imgbox.com/0b/50/n5wG3dfV_o.png?download=true" alt="RG Grouppage"/>
-<br> 1. Create a Resource Group< br>
+<br> 1. Create a Resource Group <br>
   <img src="https://imgbox.com/jxIp19aZ" alt="Create VM"/>
   
   <img src="https://imgbox.com/hoky3fCP" alt="VM1 Creation 1"/>
