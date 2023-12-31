@@ -42,7 +42,7 @@ Once Wireshark was downloaded and installed, I went ahead and filtered for ICMP 
 <br />
 
 <p>
-<img src="https://imgur.com/a/p248R4f" height="100%" width="100%" alt="Azure Networking Steps"/>
+<img src="https://imgur.com/a/kLXmY8I" height="100%" width="100%" alt="Azure Networking Steps"/>
 </p>
 <p>
 Within the Azure portal, I created a new rule set-up to Deny ICMP with a with a pritority above 300 to make sure this rule would get applied before anything else. 
